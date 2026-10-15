@@ -58,14 +58,14 @@ public:
     
 
     // --- STEP B3: Traverse and search the list ---
-    /*
+    
     void display() const
     {
         Node *currentNode = head;
 
         while (currentNode != nullptr)
         {
-            cout << "Lost item: " << currentNode->itemCode << endl;
+            cout << "Lost item: " << currentNode->itemCode << "\n" << endl;
             currentNode = currentNode->next;
         }
     }
@@ -86,7 +86,7 @@ public:
 
         return false;
     }
-    */
+    
 };
 
 int main()
@@ -96,7 +96,7 @@ int main()
     LostItemList lostItems;
 
     cout << "\n------------------------------\n" << endl;
-    cout << " - List starts empty: " << lostItems.isEmpty() << endl;
+    cout << "- List starts empty: " << lostItems.isEmpty() << endl;
     cout << "\n------------------------------" << endl;
     // --- STEP B2: Add dummy lost-item codes ---
     
@@ -104,16 +104,20 @@ int main()
     lostItems.addItem("LF-215");
     lostItems.addItem("LF-330");
 
-    cout << "\n - List starts empty after additions: "
+    cout << "\n- List starts empty after additions: "
          << lostItems.isEmpty() << "\n" << endl;
     
 
     // --- STEP B3: Display and search stored codes ---
-    /*
+    
     lostItems.display();
+    cout << "\n";
     cout << "Contains LF-215: " << lostItems.contains("LF-215") << endl;
     cout << "Contains LF-999: " << lostItems.contains("LF-999") << endl;
-    */
+    cout << "Contains LF-440: " << lostItems.contains("LF-440") << endl;
+    cout << "Contains LF-104: " << lostItems.contains("LF-104") << endl;
+    cout << "\n------------------------------\n" << endl;
+    
 
     return 0;
 }
